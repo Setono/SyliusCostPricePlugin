@@ -160,5 +160,5 @@ If you haven't overridden the template yet, you can just copy the templates from
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/SyliusCostPricePlugin.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/setono/sylius-cost-price-plugin
-[link-travis]: https://travis-ci.org/Setono/SyliusCostPricePlugin
+[link-travis]: https://travis-ci.com/Setono/SyliusCostPricePlugin
 [link-code-quality]: https://scrutinizer-ci.com/g/Setono/SyliusCostPricePlugin
