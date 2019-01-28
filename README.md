@@ -32,7 +32,7 @@ in the `config/bundles.php` file of your project:
 return [
     // ...
     
-    Setono\SyliusCostPricePlugin\SetonoSyliusBarcodePlugin::class => ['all' => true],
+    Setono\SyliusCostPricePlugin\SetonoSyliusCostPricePlugin::class => ['all' => true],
     
     // ...
 ];
@@ -95,7 +95,7 @@ $ php bin/console doctrine:migrations:migrate
 ```
 
 ### Step 6: Add form widgets to twig templates
-You need to override the template displaying the product and product variant form and add a `form_row` statement with the barcode:
+You need to override the template displaying the product and product variant form and add a `form_row` statement with the cost price and cost price currency:
 
 ```twig
 {# app/Resources/SyliusAdminBundle/views/ProductVariant/Tab/_details.html.twig #}
