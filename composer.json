@@ -1,5 +1,5 @@
 {
-    "name": "setono/sylius-costprice-plugin",
+    "name": "setono/sylius-cost-price-plugin",
     "type": "sylius-plugin",
     "description": "Add a cost price property to your products using this plugin",
     "license": "MIT",
