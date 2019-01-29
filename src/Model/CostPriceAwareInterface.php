@@ -12,7 +12,7 @@ interface CostPriceAwareInterface
     public function getCostPriceCurrency(): string;
 
     /**
-     * @param string $costPrice
+     * @param string $costPriceCurrency
      */
     public function setCostPriceCurrency(string $costPriceCurrency): void;
 
