@@ -17,12 +17,12 @@ interface CostPriceAwareInterface
     public function setCostPriceCurrency(string $costPriceCurrency): void;
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getCostPrice(): int;
+    public function getCostPrice(): ?int;
 
     /**
-     * @param int $costPrice
+     * @param int|null $costPrice
      */
-    public function setCostPrice(int $costPrice): void;
+    public function setCostPrice(?int $costPrice): void;
 }

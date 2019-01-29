@@ -12,9 +12,9 @@ trait ProductVariantTrait
     protected $costPriceCurrency = '';
 
     /**
-     * @var int
+     * @var int|null
      */
-    protected $costPrice = 0;
+    protected $costPrice = null;
 
     /**
      * @return string
@@ -33,17 +33,17 @@ trait ProductVariantTrait
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getCostPrice(): int
+    public function getCostPrice(): ?int
     {
         return $this->costPrice;
     }
 
     /**
-     * @param int $costPrice
+     * @param int|null $costPrice
      */
-    public function setCostPrice(int $costPrice): void
+    public function setCostPrice(?int $costPrice): void
     {
         $this->costPrice = $costPrice;
     }

@@ -52,7 +52,7 @@ In `config/doctrine/Product.orm.xml`:
 
     <mapped-superclass name="App\Model\ProductVariant" table="sylius_product_variant">
         <field name="costPriceCurrency" column="cost_price_currency" />
-        <field name="costPrice" column="cost_price" type="integer" />
+        <field name="costPrice" column="cost_price" type="integer" nullable="true" />
     </mapped-superclass>
 
 </doctrine-mapping>
