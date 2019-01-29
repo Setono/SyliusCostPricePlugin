@@ -51,8 +51,8 @@ In `config/doctrine/Product.orm.xml`:
                                       http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="App\Model\ProductVariant" table="sylius_product_variant">
-        <field name="costPriceCurrency" column="cost_price_currency" />
-        <field name="costPrice" column="cost_price" type="integer" />
+        <field name="costPriceCurrency" column="cost_price_currency" nullable="true" />
+        <field name="costPrice" column="cost_price" type="integer" nullable="true" />
     </mapped-superclass>
 
 </doctrine-mapping>

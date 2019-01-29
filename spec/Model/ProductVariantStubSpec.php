@@ -12,18 +12,27 @@ class ProductVariantStubSpec extends ObjectBehavior
         $this->shouldHaveType(ProductVariantStub::class);
     }
 
-    public function it_has_default_cost_price(): void
+    public function it_has_default_cost_price_and_cost_price_currency(): void
     {
-        $this->getCostPriceCurrency()->shouldBe('');
-        $this->getCostPrice()->shouldBe(0);
+        $this->getCostPriceCurrency()->shouldBe(null);
+        $this->getCostPrice()->shouldBe(null);
     }
 
     public function it_should_be_able_to_change_cost_price(): void
     {
-        $this->setCostPriceCurrency('USD');
         $this->setCostPrice('10');
-
-        $this->getCostPriceCurrency()->shouldBe('USD');
         $this->getCostPrice()->shouldBe(10);
+        $this->setCostPrice(null);
+        $this->getCostPrice()->shouldBe(null);
+    }
+
+    public function it_should_be_able_change_cost_price_currency(): void
+    {
+        $this->setCostPriceCurrency('USD');
+        $this->getCostPriceCurrency()->shouldBe('USD');
+        $this->setCostPriceCurrency('');
+        $this->getCostPriceCurrency()->shouldBe('');
+        $this->setCostPriceCurrency(null);
+        $this->getCostPriceCurrency()->shouldBe(null);
     }
 }

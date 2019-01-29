@@ -17,7 +17,20 @@ Feature: Adding a new product with a cost price
     And I set its slug to "dice-brewing" in "English (United States)"
     And I set its price to "$10.00" for "United States" channel
     And I set its cost price to "10"
-	And I set its cost price currency to "USD"
+    And I set its cost price currency to "USD"
     And I add it
     Then I should be notified that it has been successfully created
     And the product "Dice Brewing" should appear in the store
+
+  @ui
+  Scenario: Adding a new simple product with cost price and cost price currency
+    Given I want to create a new simple product
+    When I specify its code as "BOARD_FISH_BREWING"
+    And I name it "Fish Brewing" in "English (United States)"
+    And I set its slug to "fish-brewing" in "English (United States)"
+    And I set its price to "$10.00" for "United States" channel
+    And I set its cost price to ""
+    And I set its cost price currency to "USD"
+    And I add it
+    Then I should be notified that it has been successfully created
+    And the product "Fish Brewing" should appear in the store

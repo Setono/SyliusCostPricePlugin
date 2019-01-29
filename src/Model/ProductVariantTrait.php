@@ -7,43 +7,43 @@ namespace Setono\SyliusCostPricePlugin\Model;
 trait ProductVariantTrait
 {
     /**
-     * @var string
+     * @var string|null
      */
-    protected $costPriceCurrency = '';
+    protected $costPriceCurrency;
 
     /**
-     * @var int
+     * @var int|null
      */
-    protected $costPrice = 0;
+    protected $costPrice;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCostPriceCurrency(): string
+    public function getCostPriceCurrency(): ?string
     {
         return $this->costPriceCurrency;
     }
 
     /**
-     * @param string $costPriceCurrency
+     * @param string|null $costPriceCurrency
      */
-    public function setCostPriceCurrency(string $costPriceCurrency): void
+    public function setCostPriceCurrency(?string $costPriceCurrency): void
     {
         $this->costPriceCurrency = $costPriceCurrency;
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getCostPrice(): int
+    public function getCostPrice(): ?int
     {
         return $this->costPrice;
     }
 
     /**
-     * @param int $costPrice
+     * @param int|null $costPrice
      */
-    public function setCostPrice(int $costPrice): void
+    public function setCostPrice(?int $costPrice): void
     {
         $this->costPrice = $costPrice;
     }
