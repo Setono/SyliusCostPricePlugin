@@ -137,14 +137,14 @@ You need to override the template displaying the product and product variant for
 
     {# Nothing to see here. #}
     <div class="ui hidden element">
-        {# This is the part you should add #}
-        <div class="two fields">
-            {{ form_row(form.variant.costPriceCurrency) }}
-            {{ form_row(form.variant.costPrice) }}
-        </div>
-        {# End of the part you should add #}
-    
         {% if product.simple %}
+            {# This is the part you should add #}
+            <div class="two fields">
+                {{ form_row(form.variant.costPriceCurrency) }}
+                {{ form_row(form.variant.costPrice) }}
+            </div>
+            {# End of the part you should add #}
+        
             {{ form_row(form.variant.translations) }}
         {% endif %}
         {{ form_row(form.variantSelectionMethod) }}
