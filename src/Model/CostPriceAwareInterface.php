@@ -7,14 +7,14 @@ namespace Setono\SyliusCostPricePlugin\Model;
 interface CostPriceAwareInterface
 {
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCostPriceCurrency(): string;
+    public function getCostPriceCurrency(): ?string;
 
     /**
-     * @param string $costPriceCurrency
+     * @param string|null $costPriceCurrency
      */
-    public function setCostPriceCurrency(string $costPriceCurrency): void;
+    public function setCostPriceCurrency(?string $costPriceCurrency): void;
 
     /**
      * @return int|null
