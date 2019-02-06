@@ -156,7 +156,7 @@ If you haven't overridden the template yet, you can just copy the templates from
 
 [ico-version]: https://img.shields.io/packagist/v/setono/sylius-cost-price-plugin.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/Setono/SyliusCostPricePlugin/master.svg?style=flat-square
+[ico-travis]: https://travis-ci.com/Setono/SyliusCostPricePlugin.svg?branch=master
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/SyliusCostPricePlugin.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/setono/sylius-cost-price-plugin
