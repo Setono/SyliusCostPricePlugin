@@ -16,7 +16,7 @@ Feature: Adding a new product with a cost price
     And I name it "Dice Brewing" in "English (United States)"
     And I set its slug to "dice-brewing" in "English (United States)"
     And I set its price to "$10.00" for "United States" channel
-    And I set its cost price to "10"
+    And I set its cost price to "10.92"
     And I set its cost price currency to "USD"
     And I add it
     Then I should be notified that it has been successfully created
