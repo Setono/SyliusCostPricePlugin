@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Setono\SyliusCostPricePlugin\Form\Extension;
 
+use Sylius\Bundle\MoneyBundle\Form\DataTransformer\SyliusMoneyTransformer;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType;
 use Sylius\Component\Currency\Context\CurrencyContextInterface;
 use Sylius\Component\Locale\Context\LocaleContextInterface;
@@ -41,6 +42,10 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
         $builder->add('costPrice', NumberType::class, [
             'label' => 'setono_sylius_cost_price.form.product_variant.costPrice',
         ]);
+
+        $builder->get('costPrice')
+            ->resetViewTransformers()
+            ->addViewTransformer(new SyliusMoneyTransformer(2, false, null, 100));
     }
 
     public static function getExtendedTypes(): iterable
