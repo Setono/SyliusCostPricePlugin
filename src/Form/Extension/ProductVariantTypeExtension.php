@@ -35,12 +35,12 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('costPriceCurrency', CurrencyType::class, [
-            'label' => 'setono_sylius_cost_price.form.product_variant.costPriceCurrency',
+            'label' => 'setono_sylius_cost_price.form.product_variant.cost_price_currency',
             'preferred_choices' => [$this->preferredCurrencyName => $this->preferredCurrency],
         ]);
 
         $builder->add('costPrice', NumberType::class, [
-            'label' => 'setono_sylius_cost_price.form.product_variant.costPrice',
+            'label' => 'setono_sylius_cost_price.form.product_variant.cost_price',
         ]);
 
         $builder->get('costPrice')

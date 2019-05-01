@@ -17,4 +17,4 @@ sylius_product:
     resources:
         product_variant:
             classes:
-                model: Tests\Setono\SyliusCostPricePlugin\Application\src\Model\ProductVariant
+                model: Tests\Setono\SyliusCostPricePlugin\Application\Entity\ProductVariant

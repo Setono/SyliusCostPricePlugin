@@ -1,5 +1,5 @@
 setono_sylius_cost_price:
     form:
         product_variant:
-            costPrice: Kostpris
-            costPriceCurrency: Kostpris valuta
+            cost_price: Kostpris
+            cost_price_currency: Kostpris valuta
