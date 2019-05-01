@@ -16,6 +16,8 @@ doctrine:
     orm:
         mappings:
             App:
-                type: xml
-                dir: '%kernel.project_dir%/config/doctrine'
-                prefix: Tests\Setono\SyliusCostPricePlugin\Application\src\Model
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/Entity'
+                prefix: 'Tests\Setono\SyliusCostPricePlugin\Application\Entity'
+                alias: App

@@ -4,14 +4,20 @@ declare(strict_types=1);
 
 namespace Setono\SyliusCostPricePlugin\Model;
 
+use Doctrine\ORM\Mapping as ORM;
+
 trait ProductVariantTrait
 {
     /**
+     * @ORM\Column(type="string", nullable=true)
+     *
      * @var string|null
      */
     protected $costPriceCurrency;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     *
      * @var int|null
      */
     protected $costPrice;
