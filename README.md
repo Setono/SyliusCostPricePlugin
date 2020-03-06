@@ -50,7 +50,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Setono\SyliusCostPricePlugin\Model\CostPriceAwareInterface;
-use Setono\SyliusCostPricePlugin\Model\ProductVariantTrait;
+use Setono\SyliusCostPricePlugin\Model\ProductVariantTrait as CostPriceProductVariantTrait;
 use Sylius\Component\Core\Model\Product as BaseProduct;
 
 /**
@@ -59,7 +59,7 @@ use Sylius\Component\Core\Model\Product as BaseProduct;
  */
 class ProductVariant extends BaseProduct implements CostPriceAwareInterface
 {
-    use ProductVariantTrait;
+    use CostPriceProductVariantTrait;
     
     // ...
 }
