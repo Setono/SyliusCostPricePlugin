@@ -12,7 +12,7 @@ use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CurrencyType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Intl\Intl;
+use Symfony\Component\Intl\Currencies;
 
 class ProductVariantTypeExtension extends AbstractTypeExtension
 {
@@ -29,7 +29,7 @@ class ProductVariantTypeExtension extends AbstractTypeExtension
     public function __construct(LocaleContextInterface $locale, CurrencyContextInterface $currencyContext)
     {
         $this->preferredCurrency = $currencyContext->getCurrencyCode();
-        $this->preferredCurrencyName = Intl::getCurrencyBundle()->getCurrencyNames($locale->getLocaleCode())[$this->preferredCurrency];
+        $this->preferredCurrencyName = Currencies::getName($this->preferredCurrency, $locale->getLocaleCode());
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
