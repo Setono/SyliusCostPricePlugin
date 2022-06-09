@@ -4,8 +4,7 @@
     "description": "Add a cost price property to your product variants using this plugin",
     "license": "MIT",
     "require": {
-        "php": "^7.2",
-
+        "php": ">=7.4",
         "sylius/sylius": "^1.3"
     },
     "require-dev": {
@@ -24,7 +23,7 @@
         "phpstan/phpstan-shim": "^0.10",
         "phpstan/phpstan-symfony": "^0.10",
         "phpstan/phpstan-webmozart-assert": "^0.10",
-        "roave/security-advisories": "dev-master",
+        "roave/security-advisories": "dev-latest",
         "sensiolabs/security-checker": "^5.0",
         "sylius-labs/coding-standard": "^2.0",
         "symfony/browser-kit": "^4.3|^5.0",
